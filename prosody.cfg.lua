@@ -50,7 +50,6 @@ modules_enabled = {
 		"blocklist"; -- Allow users to block communications with other users
 		"vcard4"; -- User profiles (stored in PEP)
 		"vcard_legacy"; -- Conversion between legacy vCard and PEP Avatar, vcard
-
 	-- Nice to have
 		"version"; -- Replies to server version requests
 		"uptime"; -- Report how long server has been running
@@ -85,6 +84,7 @@ modules_enabled = {
 		"http_upload";
         	"http";
 		"bookmarks";
+
 }
 
 -- These modules are auto-loaded, but should you want
@@ -161,7 +161,7 @@ storage = "sql" -- Default is "internal"
 
 -- For the "sql" backend, you can uncomment *one* of the below to configure:
 --sql = { driver = "SQLite3", database = "prosody.sqlite" } -- Default. 'database' is the filename.
-sql = { driver = "MySQL", database = "DATABASENAME", username = "USERNAME", password = "PASSWORD", host = "HOST" }
+sql = { driver = "MySQL", database = "XXXXXXX", username = "XXXXXXX", password = "XXXXXXX", host = "XXXXXXX" }
 --sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "secret", host = "localhost" }
 
 
@@ -231,6 +231,10 @@ muc_tombstones = false
 muc_tombstone_expiry = 86400 * 7
 
 Component "proxy.skriva.me" "proxy65"
+
+Component "p2.skriva.me"
+	component_secret = "XXXXXXX"
+	component_ports = { XXXX }
 
 ---Set up an external component (default component port is 5347)
 --
